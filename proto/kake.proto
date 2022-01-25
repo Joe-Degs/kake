@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = ".";
+
+package kake;
+
+service KakeService {
+    rpc GetHellos(Void) returns (stream Hello) {}
+}
+
+message Void {}
+
+message Hello {
+    string msg = 1;
+}
